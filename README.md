@@ -1,7 +1,3 @@
-Certainly! Here's the readme with proper formatting:
-
----
-
 # Complex Number Operations in C++
 
 This C++ program provides a comprehensive set of operations for working with complex numbers. It includes functionalities for converting between polar and rectangular forms, calculating modulus, argument, conjugate, reciprocal, and performing basic arithmetic operations on complex numbers.
@@ -64,7 +60,3 @@ Abhrankan Chakrabarti
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-This readme provides an overview of the complex number operations supported by the program, along with instructions on how to compile and execute the code. Examples are provided to demonstrate the usage of different operations. The author of the program is Abhrankan Chakrabarti, and the project is licensed under the MIT License.
