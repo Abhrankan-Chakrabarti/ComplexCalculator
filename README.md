@@ -1,3 +1,7 @@
+Certainly! Here's the readme with proper formatting:
+
+---
+
 # Complex Number Operations in C++
 
 This C++ program provides a comprehensive set of operations for working with complex numbers. It includes functionalities for converting between polar and rectangular forms, calculating modulus, argument, conjugate, reciprocal, and performing basic arithmetic operations on complex numbers.
@@ -26,11 +30,11 @@ This C++ program provides a comprehensive set of operations for working with com
    ./complex
    ```
 
-3. **Operation**: Follow the on-screen menu to select the desired complex number operation and input the required values.
+3. **Operation**: Follow the on-screen menu to select the desired complex number operation and input the required values, including the angle unit for argument calculation.
 
-## Example
+## Examples
 
-Here's an example of calculating the modulus and argument of a complex number:
+### Modulus Calculation
 
 ```
 Enter your choice :   1
@@ -41,6 +45,18 @@ z = 3+4i
 |z| = 5
 ```
 
+### Argument Calculation
+
+```
+Enter your choice :   2
+Enter a complex no :
+Enter the Real Part :   3
+Enter the Imaginary Part :   4
+Enter its Angle Unit (d/r/g) :   d
+z = 3+4i
+arg(z) = 53.1301°
+```
+
 ## Author
 
 Abhrankan Chakrabarti
@@ -48,3 +64,7 @@ Abhrankan Chakrabarti
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+This readme provides an overview of the complex number operations supported by the program, along with instructions on how to compile and execute the code. Examples are provided to demonstrate the usage of different operations. The author of the program is Abhrankan Chakrabarti, and the project is licensed under the MIT License.
