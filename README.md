@@ -50,34 +50,28 @@ print(f"Rectangular form: {rec}")
 ## C++ Usage Example
 
 ```cpp
-#include "complex.h"
+#include <iostream>
+#include "complex.h"  // Include the header file
 
 int main() {
-    Complex z(3, 4, false, true, 'i');
+    complex z1, z2;
+    std::cout << "Enter a complex number (x y): ";
+    std::cin >> z1;
 
-    // Calculate modulus
-    double mod = z.mod();
-    cout << "Modulus: " << mod << endl;
+    std::cout << "Enter another complex number (x y): ";
+    std::cin >> z2;
 
-    // Calculate argument in radians
-    Complex arg = z.arg("r");
-    cout << "Argument (radians): " << arg << endl;
+    complex sum = z1 + z2;
+    std::cout << "Sum: " << sum << std::endl;
 
-    // Calculate conjugate
-    Complex conj = z.conjg();
-    cout << "Conjugate: " << conj << endl;
+    complex diff = z1 - z2;
+    std::cout << "Difference: " << diff << std::endl;
 
-    // Calculate reciprocal
-    Complex reci = z.reci();
-    cout << "Reciprocal: " << reci << endl;
+    complex product = z1 * z2;
+    std::cout << "Product: " << product << std::endl;
 
-    // Convert to polar form
-    Complex pol = z.pol();
-    cout << "Polar form: " << pol << endl;
-
-    // Convert to rectangular form
-    Complex rec = z.rec();
-    cout << "Rectangular form: " << rec << endl;
+    complex quotient = z1 / z2;
+    std::cout << "Quotient: " << quotient << std::endl;
 
     return 0;
 }
