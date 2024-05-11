@@ -1,62 +1,23 @@
-# Complex Number Operations in C++
+# Complex Number Operations
 
-This C++ program provides a comprehensive set of operations for working with complex numbers. It includes functionalities for converting between polar and rectangular forms, calculating modulus, argument, conjugate, reciprocal, and performing basic arithmetic operations on complex numbers.
+This repository contains implementations for complex number operations in both Python and C++.
 
-## Features
+## Python Implementation
 
-- **Modulus (`mod`)**: Calculate the modulus of a complex number.
-- **Argument (`arg`)**: Calculate the argument (angle) of a complex number.
-- **Conjugate (`conjugate`)**: Calculate the conjugate of a complex number.
-- **Reciprocal (`reci`)**: Calculate the reciprocal of a complex number.
-- **Polar Conversion (`pol`)**: Convert a complex number to polar form.
-- **Rectangular Conversion (`rec`)**: Convert a complex number to rectangular form.
-- **Arithmetic Operations**: Addition, subtraction, multiplication, division, and exponentiation of complex numbers.
+The Python implementation is provided in the file `Complex.py`. It allows for various operations on complex numbers, including modulus, argument, conjugate, reciprocal, conversion between polar and rectangular forms, and basic arithmetic operations.
 
-## Usage
+### Usage
 
-1. **Compilation**: Compile the program using a C++ compiler (e.g., g++):
+To use the Python implementation, simply import the `Complex` class from `Complex.py` and create instances of complex numbers. You can then perform operations on these instances as needed.
 
-   ```bash
-   g++ complex.cpp -o complex
-   ```
+## C++ Implementation
 
-2. **Execution**: Run the compiled program:
+The C++ implementation is provided in the file `complex.cpp`. It offers similar functionality to the Python implementation, allowing for operations on complex numbers such as addition, subtraction, multiplication, division, and exponentiation.
 
-   ```bash
-   ./complex
-   ```
+### Usage
 
-3. **Operation**: Follow the on-screen menu to select the desired complex number operation and input the required values, including the angle unit for argument calculation.
+To use the C++ implementation, include the `complex.cpp` file in your C++ project and use the provided functions to perform operations on complex numbers.
 
-## Examples
+---
 
-### Modulus Calculation
-
-```
-Enter your choice :   1
-Enter a complex no :
-Enter the Real Part :   3
-Enter the Imaginary Part :   4
-z = 3+4i
-|z| = 5
-```
-
-### Argument Calculation
-
-```
-Enter your choice :   2
-Enter a complex no :
-Enter the Real Part :   3
-Enter the Imaginary Part :   4
-Enter its Angle Unit (d/r/g) :   d
-z = 3+4i
-arg(z) = 53.1301°
-```
-
-## Author
-
-Abhrankan Chakrabarti
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+**Note:** This repository is for educational purposes and may not be suitable for production use. Use it at your own discretion.
