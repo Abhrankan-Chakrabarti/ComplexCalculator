@@ -108,6 +108,15 @@ g++ main_complex.cpp -o main_complex -L. -lcomplex
 ./main_complex
 ```
 
+## Standalone Complex Calculator
+
+For those who prefer a standalone menu-driven complex calculator that does not require separate compiling and linking, use the following commands:
+
+```bash
+g++ standalone_complex_calculator.cpp -o standalone_complex_calculator
+./standalone_complex_calculator
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
