@@ -27,7 +27,7 @@ mod = z.mod()
 print(f"Modulus: {mod}")
 
 # Calculate argument in degrees
-arg_deg = z.arg('d').b[0]
+arg_deg = z.arg('d')
 print(f"Argument (degrees): {arg_deg}")
 
 # Calculate conjugate
