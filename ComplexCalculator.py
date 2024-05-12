@@ -22,7 +22,3 @@ print(f"Reciprocal: {reci}")
 # Convert to polar form
 pol = z.pol()
 print(f"Polar form: {pol}")
-
-# Convert to rectangular form
-rec = z.rec()
-print(f"Rectangular form: {rec}")
