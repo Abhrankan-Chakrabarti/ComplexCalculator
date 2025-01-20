@@ -38,11 +38,11 @@ class Complex:
 		return Complex(self.a, -self.b)
 	def reci(self):
 		return Complex(1, 0, self.u)/self
-	def pol(self, u=''):
-		return Complex(self.mod(), self.arg(u).b, pol=True)
-	def rec(self):
+	def pol(self, u='', disp=False):
+		return Complex(self.mod(), self.arg(u).b, pol=True, disp=disp)
+	def rec(self, disp=False):
 		i = self.b[0]/self.b[1][1]
-		return Complex(self.a*cos(i), self.a*sin(i))
+		return Complex(self.a*cos(i), self.a*sin(i), disp=disp)
 	def __add__(self, z):
 		if self.disp:
 			if not l:
@@ -55,7 +55,7 @@ class Complex:
 			if self.u != False and z.u != False and self.b == (self.b[1][1]/z.b[1][1]*z.b[0], self.b[1]):
 				return Complex(self.a+z.a, self.b, pol=True)
 			if self.u != False:
-				self = self.rec()
+				self = self.rec(disp=self.disp)
 				if self.disp:
 					print(' + '.join(f"z{k+1}" for k in range(i)), f"= {self}")
 			if z.u != False:
@@ -81,7 +81,7 @@ class Complex:
 			if self.u != False and z.u !=False and self.b == (self.b[1][1]/z.b[1][1]*z.b[0], self.b[1]):
 				return Complex(self.a-z.a, self.b, pol=True)
 			if self.u != False:
-				self = self.rec()
+				self = self.rec(disp=self.disp)
 				if self.disp:
 					print(' - '.join(f"z{k+1}" for k in range(i)), f"= {self}")
 			if z.u != False:
@@ -139,10 +139,19 @@ class Complex:
 		c = z.a**2+z.b**2
 		return Complex((self.a*z.a+self.b*z.b)/c, (z.a*self.b-self.a*z.b)/c)
 	def __pow__(self, z):
+		if self.disp:
+			if not l:
+				l.append(len(globals()['z']))
+			l[0] -= 1
+			j = l[0]
 		if self.u == False:
-			self = self.pol()
+			self = self.pol(disp=self.disp)
+			if self.disp:
+				print(f"z{j} = {self}")
 		if z.u != False:
 			z = z.rec()
+			if self.disp:
+				print(' ** '.join(f"z{k+1}" for k in range(j, len(globals()['z']))), f"= {z}")
 		return Complex(self.a/e**(self.b[0]/self.b[1][1]*z.b), (z.a*self.b[0], self.b[1]), pol=True)
 	def __repr__(self):
 		if type(self.b) == tuple:
@@ -176,7 +185,7 @@ class Complex:
 		return repr(self)
 if __name__ == '__main__':
 	while 1:
-		print('*'*16,' '.join('COMPLEX'),'',' '.join('NUMBER'),'*'*16)
+		print('*'*8,' '.join('COMPLEX'),'',' '.join('NUMBER'),'*'*8)
 		choices = 'Modulus Argument Conjugate Reciprocal Polar Rectangular Add Subtract Multiply Divide Power Exit'.split()
 		for i, j in enumerate(choices):
 			print(f"{i+1}. {j}")
